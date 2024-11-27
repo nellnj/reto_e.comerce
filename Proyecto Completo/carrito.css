@@ -1,0 +1,214 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-main: #4b33a8;
+    --clr-main-light: #785ce9;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+    --clr-dark: #2f2f2f;
+    --clr-light-gray: #f4f4f4;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
+    font-size: 1rem;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Contenedor principal */
+main {
+    padding: 30px;
+    background-color: var(--clr-light-gray);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    color: var(--clr-main);
+}
+
+/* Carrito */
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto-carrito:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.producto-carrito img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.detalle-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    max-width: 200px;
+}
+
+.detalle-producto h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--clr-main);
+}
+
+.detalle-producto p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.eliminar-carrito {
+    background-color: var(--clr-red);
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 0.9em;
+}
+
+.eliminar-carrito:hover {
+    background-color: #ff3333;
+    transform: scale(1.05);
+}
+
+/* Total del carrito */
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Botones de acción */
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.carrito-acciones-vaciar,
+.carrito-acciones-comprar {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.carrito-acciones-vaciar:hover,
+.carrito-acciones-comprar:hover {
+    background-color: var(--clr-main-light);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contenedor-carrito {
+        gap: 10px;
+    }
+
+    .producto-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .producto-carrito img {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .producto-carrito {
+        padding: 10px;
+    }
+
+    .detalle-producto h3 {
+        font-size: 1em;
+    }
+
+    .detalle-producto p {
+        font-size: 0.85em;
+    }
+
+    .carrito-acciones {
+        flex-direction: column;
+    }
+
+    .carrito-acciones-vaciar,
+    .carrito-acciones-comprar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

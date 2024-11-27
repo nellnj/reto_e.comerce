@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactanos | CarShop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="contacto.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="index.html">
+          <img src="img/logo/logo.png" alt="CarShop Logo" class="logo-img" />
+        </a>
+        
+        <nav>
+          <ul class="menu">
+            <a href="index.html"><li><button class="boton-menu boton-categoria active">Tienda</button></li></a>
+            <a href="pagInicio.html"><li><button class="boton-menu boton-categoria">Volver al inicio</button></li></a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <h2>¡Nos encantaría saber de ti!</h2>
+        <p>Si tienes alguna duda o sugerencia, no dudes en escribirnos. Estaremos encantados de ayudarte.</p>
+        
+        <form action="#" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" />
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí"></textarea>
+          </div>
+
+          <button type="submit" class="cta-button">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2022 CarShop | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
